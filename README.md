@@ -15,7 +15,7 @@
   <a href="./README_EN.md"><img alt="English" src="https://img.shields.io/badge/Language-English-blue"/></a>
 </p>
 
-**1. 项目亮点：**
+## 😈 1. 项目改进：
 
 - 🔥 完整 `一键部署-LLM工程化` Pipeline (LLaMA Factory Pro++)
   - 增强原有 LLaMa Factory 微调体系的部署效率
