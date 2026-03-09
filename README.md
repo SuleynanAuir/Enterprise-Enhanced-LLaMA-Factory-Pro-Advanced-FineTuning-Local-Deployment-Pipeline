@@ -1,5 +1,5 @@
 # 🚀 Enterprise-Enhanced LLaMA Factory Pro: Advanced Fine-Tuning & Local Deployment Pipeline
-![LLaMA Factory](assets/logo.png)
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/LLM-Fine--Tuning-blue"/>
@@ -11,9 +11,13 @@
 </p>
 
 <p align="center">
-  <a href="./README_CN.md"><img alt="中文" src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red"/></a>
-  <a href="./README_EN.md"><img alt="English" src="https://img.shields.io/badge/Language-English-blue"/></a>
+  <a href="./README_CN.md"><img alt="🇨🇳中文版" src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red"/></a>
+  <a href="./README_EN.md"><img alt="🇺🇸English Version" src="https://img.shields.io/badge/Language-English-blue"/></a>
 </p>
+
+![LLaMA Factory](assets/logo.png)
+
+
 
 ## 💼 1. 项目改进：
 
