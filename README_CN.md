@@ -2,31 +2,39 @@
 ![LLaMA Factory](assets/logo.png)
 
 <p align="center">
+  <img src="https://img.shields.io/badge/LLM-Fine--Tuning-blue"/>
+  <img src="https://img.shields.io/badge/AutoDL-red"/>
+  <img src="https://img.shields.io/badge/EasyDataset-Data-Augmentation-yellow"/>
+  <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
+  <img src="https://img.shields.io/badge/Training-QLoRA%20%7C%20QLoRA%20%7C%20DPO-green"/>
+  <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
+</p>
+
+<p align="center">
   <a href="./README_CN.md"><img alt="中文" src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red"/></a>
   <a href="./README_EN.md"><img alt="English" src="https://img.shields.io/badge/Language-English-blue"/></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/LLM-Fine--Tuning-blue"/>
-  <img src="https://img.shields.io/badge/Framework-Transformers-yellow"/>
-  <img src="https://img.shields.io/badge/Training-LoRA%20%7C%20QLoRA%20%7C%20DPO-green"/>
-  <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
-  <img src="https://img.shields.io/badge/GPU-RTX4090%20%7C%20A100-red"/>
-  <img src="https://img.shields.io/badge/Stack-Python%20%7C%20PyTorch-black"/>
-</p>
+**1. 项目亮点：**
 
-**项目亮点：**
-
-* 🔥 完整 LLM 工程化 Pipeline
-* 🧠 面向招聘，突出 AI / LLM 工程能力
-* ⚡ 支持多 GPU / 多显存优化
-* 📊 可展示 Benchmark 与训练曲线
-* 🤖 可直接扩展 RAG & Agent 应用
+- 🔥 完整 `一键部署-LLM工程化` Pipeline (LLaMA Factory Pro++)
+  - 增强原有 LLaMa Factory 微调体系的部署效率
+  
+- 💻 云平台 AutoDL `托管云端数据存储 + 训练` (AutoDL)
+  
+- 👍 利用 `EasyDataset` 进行数据增强全流程pipeline
+  - 支持私有数据 (`private data`) 直接进行加载 + 增强
+  - 自动识别多模态文件 + 生成高质量、高相关性【问题+答案】pair + 全文推理逻辑链训练
+ 
+- ⚡️ 支持多 GPU / 多显存优化
+  - 单机多卡 / 多卡多机部署
+  
+- 🤖 可直接扩展 RAG & Agent 应用
 
 
 ---
 
-## 🌟 项目定位（面向招聘 + 业务落地）
+## 🌟 2. 项目定位
 
 ### LLMs 微调全链路
 本项目提供一条可落地的 **LLM 全流程工程链路**：
@@ -51,7 +59,7 @@
 
 ---
 
-## 🧩 典型业务场景
+## 🧩 3. 典型业务场景
 
 - 客服与工单 Copilot（私有知识问答）
 - 企业内部知识助手（制度、SOP、FAQ）
@@ -60,7 +68,7 @@
 
 ---
 
-## 🏗️ 系统架构
+## 🏗️ 4. 系统架构
 
 ```text
 数据采集 → 清洗 → 增强 → Dataset 注册
@@ -78,7 +86,7 @@ RAG + Agent 编排（可选）
 
 ---
 
-## 💼 工程亮点
+## 💼 5. 工程亮点
 
 - **数据工程化**：统一字段规范、样本增强、质量过滤
 - **训练高效化**：混合精度、梯度累积、多 GPU 适配
@@ -88,8 +96,9 @@ RAG + Agent 编排（可选）
 
 ---
 
-## 📈 业务指标展示模板
+## 📈 6. 业务指标展示模板
 
+> example: 
 | 指标 | 基线模型 | 微调后 | 改善 |
 | --- | --- | --- | --- |
 | 任务准确率 | 71% | 86% | +15 pts |
@@ -101,7 +110,7 @@ RAG + Agent 编排（可选）
 
 ---
 
-## ☁️ 云端 GPU 环境
+## ☁️ 7. 云端 GPU 环境
 
 推荐 GPU：`RTX 4090` / `A100` / `H100`  
 推荐 Python：`3.11`
@@ -130,7 +139,7 @@ pip install -e ".[torch,metrics]"
 
 ---
 
-## 📁 建议目录结构
+## 📁 8. 建议目录结构
 
 ```bash
 LLaMa-Factory-Fine-Tuning/
@@ -148,7 +157,7 @@ LLaMa-Factory-Fine-Tuning/
 ---
 
 
-## 📊 数据工程（核心）
+## 📊 9. 数据工程（核心）
 
 > (1) 使用 **EasyDataset** 自动生成训练数据\
 > (2) 数据增强策略：指令扩展、多答案、多模态上下文 \
@@ -162,8 +171,6 @@ LLaMa-Factory-Fine-Tuning/
 - ‼️：配置过程，详细参数解释
 - 🥬：输出：输出到某一个位置的 json 文件，然后额外复制到自己手动复制到自己存放数据的位置（命名），**`⚠️一定要一定要！！！在 /“xxx/LLaMa Factory Fine-Tuning/data/dataset_info.json” 目录下，增加一个 <命名> 的配置`**
 
-
-
 ```json
 {
  "weibo_dataset": {
@@ -175,7 +182,7 @@ LLaMa-Factory-Fine-Tuning/
 
 ---
 
-## 🚀 本地部署示例（Ollama）
+## 🚀 10. 本地部署示例（Ollama）
 
 创建 `Modelfile`：
 
@@ -193,7 +200,7 @@ ollama run my-model
 
 ---
 
-## 🧠 能力映射
+## 🧠 11. 能力映射细节
 
 | 能力维度 | 项目内容 |
 | --- | --- |
@@ -210,7 +217,7 @@ ollama run my-model
 ---
 
 
-### 🔥 模型微调
+### 🔥 11.1 模型微调
 
 基础模型：LLaMA / Qwen / Mistral / DeepSeek
 
@@ -235,14 +242,7 @@ epochs = 3
 ---
 
 
-
-💡 **工程实践价值：**
-招聘官可直接看到你掌握了**数据工程 + 模型微调 + 优化部署 + AI 产品落地能力**。
-
-
-
-
-### ⚡ 微调模型量化与优化
+### ⚡ 11.2 微调模型量化与优化
 
 ```bash
 python convert_hf_to_gguf.py \
@@ -260,7 +260,7 @@ python convert_hf_to_gguf.py \
 
 ---
 
-### 🚀 应用模型本地部署（Ollama / llama.cpp）
+### 🚀 11.3 应用模型本地部署（Ollama / llama.cpp）
 
 创建 `Modelfile`:
 
@@ -282,7 +282,7 @@ ollama run my-model
 
 ---
 
-### 🤖 RAG + Agent 扩展（可选）
+### 🤖 11.4 RAG + Agent 扩展（可选）
 
 1. 将模型接入 **文档检索 + 知识库**
 2. 实现 **Question → Context → Answer** 流程
