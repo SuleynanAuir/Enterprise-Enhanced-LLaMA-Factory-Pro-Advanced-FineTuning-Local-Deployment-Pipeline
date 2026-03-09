@@ -9,12 +9,15 @@
   <img src="https://img.shields.io/badge/Training-QLoRA%20%7C%20QLoRA%20%7C%20DPO-green"/>
 </p> -->
 
-![LLM](https://img.shields.io/badge/LLM-LLaMA-blue)
-![Framework](https://img.shields.io/badge/Framework-LLaMAFactory-green)
-![Dataset](https://img.shields.io/badge/Dataset-EasyDataset-yellow)
-![Pipeline](https://img.shields.io/badge/Pipeline-LLM%20Training-orange)
-![Deployment](https://img.shields.io/badge/Deployment-Ollama-purple)
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/LLM-Fine--Tuning-blue"/>
+  <img src="https://img.shields.io/badge/Platform-AutoDL-red"/>
+  <img src="https://img.shields.io/badge/Dataset-EasyDataset-yellow"/>
+  <img src="https://img.shields.io/badge/DataAugmentation-LLMs--Driven-yellow"/>
+  <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
+  <img src="https://img.shields.io/badge/Training-QLoRA%20%7C%20LoRA%20%7C%20DPO-green"/>
+</p>
 
 
 <p align="center">
