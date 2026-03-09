@@ -1,14 +1,21 @@
 # 🚀 Enterprise-Enhanced LLaMA Foundry Pro: Excellent Fine-Tuning & Local Deployment Pipeline All-in-One📦
 
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://img.shields.io/badge/LLM-Fine--Tuning-blue"/>
   <img src="https://img.shields.io/badge/AutoDL-red"/>
   <img src="https://img.shields.io/badge/EasyDataset-Data-Augmentation-yellow"/>
   <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
   <img src="https://img.shields.io/badge/Training-QLoRA%20%7C%20QLoRA%20%7C%20DPO-green"/>
-  <img src="https://img.shields.io/badge/Serving-Ollama%20%7C%20llama.cpp-orange"/>
-</p>
+</p> -->
+
+![LLM](https://img.shields.io/badge/LLM-LLaMA-blue)
+![Framework](https://img.shields.io/badge/Framework-LLaMAFactory-green)
+![Dataset](https://img.shields.io/badge/Dataset-EasyDataset-yellow)
+![Pipeline](https://img.shields.io/badge/Pipeline-LLM%20Training-orange)
+![Deployment](https://img.shields.io/badge/Deployment-Ollama-purple)
+![Language](https://img.shields.io/badge/Language-Python-3776AB)
+
 
 <p align="center">
   <a href="./README_CN.md"><img alt="🇨🇳中文版" src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red"/></a>
