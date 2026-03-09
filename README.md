@@ -15,7 +15,7 @@
   <a href="./README_EN.md"><img alt="English" src="https://img.shields.io/badge/Language-English-blue"/></a>
 </p>
 
-## 😈 1. 项目改进：
+## 💼 1. 项目改进：
 
 - 🔥 完整 `一键部署-LLM工程化` Pipeline (LLaMA Factory Pro++)
   - 增强原有 LLaMa Factory 微调体系的部署效率
@@ -46,8 +46,12 @@
 5. 可扩展 RAG + Agent 业务能力
 
 该项目同时强调：
-- 可展示从数据到部署的端到端工程负责
-- **业务价值**：兼顾效果、时延、成本与可维护性
+- **数据工程化**：统一字段规范、样本增强、质量过滤
+- **训练高效化**：混合精度、梯度累积、多 GPU 适配
+- **推理降本化**：量化后降低内存占用并提升 CPU 推理速度
+- **部署可复现**：本地服务配置清晰，便于演示与交付
+- **评估闭环化**：支持指标记录与实验对比，便于持续迭代
+- 
 
 ### 🛣️ 后续增强路线 (on process)
 
@@ -59,7 +63,7 @@
 
 ---
 
-## 🧩 3. 典型业务场景
+## 🧩 3. 典型业务场景 (on progress)
 
 - 客服与工单 Copilot（私有知识问答）
 - 企业内部知识助手（制度、SOP、FAQ）
@@ -68,49 +72,26 @@
 
 ---
 
-## 🏗️ 4. 系统架构
+## 🏗️ 4. 系统架构 (核心)
 
 ```text
-数据采集 → 清洗 → 增强 → Dataset 注册
+# LLaMa Factory Pro++ Structure
+
+1️⃣ 数据采集(私有) → 增强(EasyDataset) → Dataset 注册 (json + `data_info.json`增加部署)
       ↓
-模型微调（LoRA / QLoRA / DPO）
+2️⃣ LaMaFactory 模型微调工程（LoRA / QLoRA / DPO） → 按需配置settings即可 → 开始训练
       ↓
-模型导出（HuggingFace）
+3️⃣ 训练模型导出（HuggingFace）→ hf / 本地
       ↓
-模型量化（GGUF）
+4️⃣ 模型文件量化（GGUF）→ llama.cpp → GGUF: hf2gguf
       ↓
-服务部署（Ollama / llama.cpp）
+5️⃣ 服务本地部署（Ollama / llama.cpp）
       ↓
-RAG + Agent 编排（可选）
+6️⃣ RAG + Agent 编排（可选）→ 开发中...
 ```
-
 ---
 
-## 💼 5. 工程亮点
-
-- **数据工程化**：统一字段规范、样本增强、质量过滤
-- **训练高效化**：混合精度、梯度累积、多 GPU 适配
-- **推理降本化**：量化后降低内存占用并提升 CPU 推理速度
-- **部署可复现**：本地服务配置清晰，便于演示与交付
-- **评估闭环化**：支持指标记录与实验对比，便于持续迭代
-
----
-
-## 📈 6. 业务指标展示模板
-
-> example: 
-| 指标 | 基线模型 | 微调后 | 改善 |
-| --- | --- | --- | --- |
-| 任务准确率 | 71% | 86% | +15 pts |
-| 平均时延（CPU） | 2200 ms | 980 ms | -55% |
-| 单千次请求成本 | 1.00x | 0.42x | -58% |
-| 幻觉率 | 18% | 8% | -10 pts |
-
-> 建议替换为你真实实验结果（更有说服力）。
-
----
-
-## ☁️ 7. 云端 GPU 环境
+## ☁️ 5. 云端 GPU 环境
 
 推荐 GPU：`RTX 4090` / `A100` / `H100`  
 推荐 Python：`3.11`
@@ -139,25 +120,23 @@ pip install -e ".[torch,metrics]"
 
 ---
 
-## 📁 8. 建议目录结构
+## 📁 6. 建议目录结构
 
 ```bash
 LLaMa-Factory-Fine-Tuning/
-├── data/
+├── data/ 🌟
 │   ├── dataset_info.json
 │   └── *.json
 ├── scripts/
 ├── src/
-├── saves/
+├── saves/ 🌟
 ├── docs/
-├── mm_cn.md
-└── mm_en.md
 ```
 
 ---
 
 
-## 📊 9. 数据工程（核心）
+## 📊 7. 数据工程（核心）
 
 > (1) 使用 **EasyDataset** 自动生成训练数据\
 > (2) 数据增强策略：指令扩展、多答案、多模态上下文 \
@@ -182,7 +161,7 @@ LLaMa-Factory-Fine-Tuning/
 
 ---
 
-## 🚀 10. 本地部署示例（Ollama）
+## 🚀 8. 本地部署示例（Ollama）
 
 创建 `Modelfile`：
 
@@ -200,7 +179,7 @@ ollama run my-model
 
 ---
 
-## 🧠 11. 能力映射细节
+## 🧠 9. 能力映射细节
 
 | 能力维度 | 项目内容 |
 | --- | --- |
@@ -217,7 +196,7 @@ ollama run my-model
 ---
 
 
-### 🔥 11.1 模型微调
+### 🔥 9.1 模型微调
 
 基础模型：LLaMA / Qwen / Mistral / DeepSeek
 
@@ -242,7 +221,7 @@ epochs = 3
 ---
 
 
-### ⚡ 11.2 微调模型量化与优化
+### ⚡ 9.2 微调模型量化与优化
 
 ```bash
 python convert_hf_to_gguf.py \
@@ -260,7 +239,7 @@ python convert_hf_to_gguf.py \
 
 ---
 
-### 🚀 11.3 应用模型本地部署（Ollama / llama.cpp）
+### 🚀 9.3 应用模型本地部署（Ollama / llama.cpp）
 
 创建 `Modelfile`:
 
@@ -282,7 +261,7 @@ ollama run my-model
 
 ---
 
-### 🤖 11.4 RAG + Agent 扩展（可选）
+### 🤖 9.4 RAG + Agent 扩展（可选）
 
 1. 将模型接入 **文档检索 + 知识库**
 2. 实现 **Question → Context → Answer** 流程
