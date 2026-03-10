@@ -37,7 +37,7 @@
   </a>
 </p>
 
-[Google Drive Project Links 📚](https://drive.google.com/drive/folders/1Vy6Fc7nNaG_azblg9eTSTjJmT3qNmvf2?usp=sharing)
+Google Drive Project Links 👉[https://drive.google.com/drive/folders/1Vy6Fc7nNaG_azblg9eTSTjJmT3qNmvf2?usp=sharing](https://drive.google.com/drive/folders/1Vy6Fc7nNaG_azblg9eTSTjJmT3qNmvf2?usp=sharing)
 
 ![LLaMA Factory](assets/logo.png)
 
