@@ -22,10 +22,22 @@
 </p>
 
 
-<p align="center">
+<!-- <p align="center">
   <a href="./README_CN.md"><img alt="🇨🇳中文版" src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red"/></a>
   <a href="./README_EN.md"><img alt="🇺🇸English Version" src="https://img.shields.io/badge/Language-English-blue"/></a>
+</p> -->
+
+<p align="center">
+  <a href="./README_CN.md" target="_blank">
+    <img alt="🇨🇳 中文版" src="https://img.shields.io/badge/🌏-中文版-red?style=for-the-badge&logo=appveyor"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="./README_EN.md" target="_blank">
+    <img alt="🇺🇸 English Version" src="https://img.shields.io/badge/🌐-English-blue?style=for-the-badge&logo=appveyor"/>
+  </a>
 </p>
+
+[Google Drive Project Links 📚](https://drive.google.com/drive/folders/1Vy6Fc7nNaG_azblg9eTSTjJmT3qNmvf2?usp=sharing)
 
 ![LLaMA Factory](assets/logo.png)
 
